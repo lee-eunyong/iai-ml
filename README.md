@@ -1,3 +1,74 @@
 # ml3
 
-:books: 머신러닝 프로그래밍 (Machine Learning Programming) - 2026학년도 1학기:student: [학생 성함] ([학생 학번]) - 충북대학교 산업인공지능학 수강 저장소이 저장소는 충북대학교 산업인공지능학부 머신러닝 프로그래밍교과목 수강을 위한 포트폴리오, 과제 제출 및 개인 학습 내용 정리 공간입니다. :computer: :brain::info_source: 교과목 정보이미지 강의 계획서에 근거한 핵심 정보입니다.항목내용비고개설연도-학기2026년 1학기:year: :semester:교과목명머신러닝 프로그래밍핵심 과목 :chart_with_upwards_trend:교과목번호-분반8884005 - 01:id:개설학과산업인공지능학:dept:학점/시수3-3-0:credit_card:이수구분전공심화:checkered_flag:강의시간/강의실수 11, 12, 13 [E10-401/1]수요일 밤을 하얗게 지새우자! :calendar::teacher: 담당 교수 및 연락처교수님: 채민선 (Chae Min-sun) :man-teacher:E-mail: mschae@cbnu.ac.kr :email:학과전화: 043-249-1257 :phone:전화 (외부): 0000000000 :phone::book: 교재 및 참고문헌:white_check_mark: 주교재 (Main Textbook)핸즈온 머신러닝 (3판) - 오렐리앙 제롱 저, 한빛미디어 (2023) :book::link: 참고문헌 (Reference Books)데싸노트의 실전에서 통하는 머신러닝 - 권시현 저, 골든래빗 (2022) :open_file_folder:머신러닝 프로그래밍 - 김성수 저 (2021) :open_file_folder::star: 평가 방법 (Grading Policy)본 교과목의 최종 성적은 아래 기준에 따라 산출됩니다. 힘내자! :score:중간고사 (Midterm Exam): 30% :star:기말고사 (Final Exam): 40% :star2:과제 (Assignments): 20% :pencil2:출석 (Attendance): 10% :checkered_flag:(성적은 중간고사 30%, 기말고사 40%, 과제 20%, 출석 10%로 합산되어 평가됩니다.):calendar: 주별 강의 및 나의 학습 계획 (Personal Study Checklist)이미지에 제공된 주별 계획에 맞추어, 매주 학습 내용과 과제 수행 여부를 체크할 수 있도록 구성했습니다. 본인의 진행 상황에 맞게 [ ]를 [x]로 수정해 보세요!주차 (Week)학습 내용 (Topic)나의 체크리스트 (My Checklist)비고 (Notes)1주차:waving_hand: 오리엔테이션[ ] 강의 소개 및 환경 구축 완료강의 목표 및 평가 기준 이해2주차:python: 파이썬기초[ ] 파이썬 핵심 문법 복습[ ] 실습 예제 제출기초 프로그래밍 능력 점검3주차:bar_chart: 데이터 전처리, 시각화[ ] NumPy, Pandas 기초 학습[ ] Matplotlib, Seaborn 활용[ ] 관련 과제 제출EDA(탐색적 데이터 분석)4주차:chart_with_upwards_trend: 로지스틱 회귀[ ] 모델 원리 이해[ ] 구현 및 평가 실습분류(Classification)의 시작5주차:deciduous_tree: 의사결정나무[ ] 알고리즘 및 지니 불순도 이해[ ] 하이퍼파라미터 튜닝 실습복잡한 모델 탐구6주차:people_holding_hands: K-최근접 이웃[ ] K-NN 알고리즘 원리 이해[ ] 거리 기반 모델 특성 파악[ ] 관련 과제 제출데이터의 '이웃' 찾기7주차[ ][ ] 학습 및 정리 완료8주차[ ][ ] 중간고사 대비중간고사 주간9주차[ ][ ] 학습 및 정리 완료10주차[ ][ ] 학습 및 정리 완료11주차[ ][ ] 학습 및 정리 완료12주차[ ][ ] 학습 및 정리 완료13주차[ ][ ] 학습 및 정리 완료14주차[ ][ ] 학습 및 정리 완료15주차[ ][ ] 기말고사 대비기말고사 주간:open_file_folder: 저장소 구조 예시 (Suggested Structure)assignments/: 주차별 과제 파일 (e.g., assignment_wk2.ipynb)notes/: 주차별 강의 노트 및 개인 학습 정리project/: 중간/기말 프로젝트 관련 파일practice/: 개인적인 실습 코드 및 자료
+# :books: 머신러닝 프로그래밍 (Machine Learning Programming) - 2026학년도 1학기
+
+## :student: [내 이름 입력] ([내 학번 입력]) - 충북대학교 산업인공지능학부 수강 저장소
+
+이 저장소는 충북대학교 산업인공지능학부 `머신러닝 프로그래밍` 교과목 수강을 위한 포트폴리오, 과제 제출 및 개인 학습 내용 정리 공간입니다. :computer: :brain:
+
+---
+
+### :info_source: 교과목 정보
+
+| 항목 | 내용 | 비고 |
+| :--- | :--- | :--- |
+| **개설연도-학기** | 2026년 1학기 | :year: :semester: |
+| **교과목명** | 머신러닝 프로그래밍 | 핵심 과목 :chart_with_upwards_trend: |
+| **교과목번호-분반** | 8884005 - 01 | :id: |
+| **개설학과** | 산업인공지능학 | :dept: |
+| **학점/시수** | 3-3-0 | :credit_card: |
+| **이수구분** | 전공심화 | :checkered_flag: |
+| **강의시간/강의실** | 수 11, 12, 13 [E10-401/1] | :calendar: |
+
+---
+
+### :teacher: 담당 교수 및 연락처
+
+* **교수님:** 채민선 (Chae Min-sun) :man-teacher:
+* **E-mail:** mschae@cbnu.ac.kr :email:
+* **학과전화:** 043-249-1257 :phone:
+
+---
+
+### :book: 교재 및 참고문헌
+
+#### :white_check_mark: 주교재 (Main Textbook)
+1. **핸즈온 머신러닝 (3판)** - 오렐리앙 제롱 저, 한빛미디어 (2023) `:book:`
+
+#### :link: 참고문헌 (Reference Books)
+1. **데싸노트의 실전에서 통하는 머신러닝** - 권시현 저, 골든래빗 (2022) `:open_file_folder:`
+2. **머신러닝 프로그래밍** - 김성수 저 (2021) `:open_file_folder:`
+
+---
+
+### :star: 평가 방법 (Grading Policy)
+
+* **중간고사 (Midterm Exam):** **30%** `:star:`
+* **기말고사 (Final Exam):** **40%** `:star2:`
+* **과제 (Assignments):** **20%** `:pencil2:`
+* **출석 (Attendance):** **10%** `:checkered_flag:`
+
+---
+
+### :calendar: 주별 강의 및 나의 학습 계획
+
+| 주차 | 학습 내용 | 나의 체크리스트 | 비고 |
+| :--- | :--- | :--- | :--- |
+| **1주차** | :waving_hand: 오리엔테이션 | [ ] 환경 구축 완료 | |
+| **2주차** | :python: 파이썬기초 | [ ] 파이썬 문법 복습 | |
+| **3주차** | :bar_chart: 데이터 전처리, 시각화 | [ ] Pandas/Matplotlib | |
+| **4주차** | :chart_with_upwards_trend: 로지스틱 회귀 | [ ] 분류 모델 실습 | |
+| **5주차** | :deciduous_tree: 의사결정나무 | [ ] 결정 트리 구현 | |
+| **6주차** | :people_holding_hands: K-최근접 이웃 | [ ] K-NN 과제 제출 | |
+
+---
+
+## :open_file_folder: 저장소 구조 예시
+
+* `assignments/`: 주차별 과제 파일
+* `notes/`: 주차별 강의 노트 및 정리
+* `project/`: 프로젝트 관련 파일
+* `practice/`: 개인 실습 코드
+
+---
+*본 파일은 강의 계획서를 바탕으로 자동 생성되었습니다.*
