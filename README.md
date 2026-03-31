@@ -5,3 +5,4 @@ git add
 git commit
 git status
 git log
+마크다운 문법을 알아야 한다.
