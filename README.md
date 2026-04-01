@@ -61,7 +61,7 @@
 | **5주차** | :deciduous_tree: 의사결정나무 | [ ] 결정 트리 구현 | |
 | **6주차** | :people_holding_hands: K-최근접 이웃 | [ ] K-NN 과제 제출 | |
 | **7주차** | :shield: 서포트 벡터 머신 (SVM) | [ ] 마진 최대화 원리 이해 | |
-| **8주차** | :triangular_flag_on_post: 중간 프로젝트 | [ ] 프로젝트 기획 및 제출 | **중간고사 주간** |
+| **8주차** | :triangular_flag_on_post: 중간 프로젝트 | [ ] 프로젝트 기획 및 제출  | **중간고사 주간 4/15일 ** |
 | **9주차** | :straight_ruler: 선형회귀 | [ ] 회귀 분석 기초 학습 | |
 | **10주차** | :grouping_symbols: 앙상블 (Ensemble) | [ ] 보팅/배깅/부스팅 학습 | |
 | **11주차** | :mag: 비지도학습 | [ ] 군집화(Clustering) 이해 | |
