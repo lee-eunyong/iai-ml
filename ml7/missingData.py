@@ -33,6 +33,3 @@ if  __name__ == "__main__":
     # Step 3: Final verification
     print("\nstep 3: Verification after processing")
     print(housing.isnull().sum())
-
-
-
