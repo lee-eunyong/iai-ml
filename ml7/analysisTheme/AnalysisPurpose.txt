@@ -1,0 +1,281 @@
+주제 : "고속도로 주요 지점별 기상실황 데이터"를 활용하여 어떤것을 분석하고 이를 활용 할 수 있을까?
+시계열 기상 패턴 분석: 93개 지점의 데이터를 시계열로 분석하여, 기상 변화가 고속도로 노선을 따라 어떻게 이동하는지(예: 서해안 안개가 경부선으로 확산되는 속도 등)를 파악하는 예측 모델을 구축할 수 있습니다.
+"서해안 안개의 경부선 확산 속도 및 경로 예측" 모델을 구축
+
+데이터 수집
+데이터 명 : 고속도로 주요 지점별 기상실황 데이터
+데이터 설명 : 고속도로 노선 주요 지점(93개)과 기상청 데이터 상품을 융·복합하여 일기내용 및 시정, 운량, 운형, 기온, 불쾌지수, 강수, 적설량, 습도, 풍향, 풍속 등을 나타낸 지역별 기상실황 정보 데이터입니다.
+데이터 출처 : 국가교통데이터 오픈마켓
+데이터 량 : 최근 1주일(8일)
+데이터 명세서 : [참고]
+데이터에 대한 이해가 필요함
+
+
+
+
+
+
+
+고속도로 주요 지점별 기상실황 데이터"를 활용하여 어떤것을 분석하고 이를 활용 할 수 있을까?
+1. 교통안전 및 사고 위험 예측 분석 (Safety)
+가장 직접적이고 가치가 높은 분야입니다. 기상 조건은 고속도로 사고의 결정적 변수입니다.
+
+도로 살얼음(Black Ice) 예측 모델: 기온, 습도, 노면 온도 데이터를 결합하여 결빙 위험 구간을 사전에 예측합니다.
+
+시정 거리 기반 감속 가이드: '시정(VSBT_DIST)' 데이터를 활용하여 안개나 폭우 발생 시 해당 구간의 적정 안전 속도를 실시간으로 산출합니다.
+
+사고 데이터와 상관관계 분석: 과거 교통사고 이력 데이터(TROM 내 별도 구매 가능)와 기상실황을 매칭하여, 특정 기상 조건(예: 강수량 10mm/h 이상 + 풍속 5m/s 이상)에서 사고 확률이 급증하는 지점을 도출할 수 있습니다.
+
+2. 물류 및 운송 최적화 (Logistics)
+기업용 솔루션이나 물류 IT 관점에서 활용도가 높습니다.
+
+동적 경로 재탐색 (Dynamic Routing): 단순 정체가 아닌, 폭설이나 강풍 등 '기상 재해'로 인한 통제 가능성을 미리 계산하여 물류 차량에 우회 경로를 제안합니다.
+
+연비 효율 분석: 풍향과 풍속 데이터를 차량 주행 데이터와 결합하여, 맞바람이나 측풍이 대형 화물차의 연비에 미치는 영향을 분석하고 경제 운전 가이드를 제공할 수 있습니다.
+
+3. 고속도로 관리 및 운영 효율화 (Maintenance)
+시스템 관리자나 공공 기관의 입장에서 접근하는 방식입니다.
+
+제설 장비 배치 최적화: 적설량과 강수량 데이터를 분석하여 제설 차량과 염화칼슘을 어디에 우선 배치할지 결정하는 알고리즘을 개발할 수 있습니다.
+
+VMS(도로전광판) 자동화 메시지 생성: 특정 지점의 기상 수치가 임계치를 넘으면 별도의 조작 없이도 "안개 주의, 감속 운행" 등의 메시지를 인근 VMS에 즉시 송출하는 연동 시스템 구축이 가능합니다.
+
+4. AI 및 딥러닝 모델링 (Tech Focus)
+질문자님의 전문 분야인 AI를 접목한 시도입니다.
+
+기상 기반 도착 예정 시간(ETA) 보정: 현재의 경로 탐색 알고리즘은 주로 실시간 교통량에 의존합니다. 여기에 '악천후 변수'를 가중치로 입력하여 훨씬 정확한 도착 시간을 예측하는 딥러닝 모델을 학습시킬 수 있습니다.
+
+시계열 기상 패턴 분석: 93개 지점의 데이터를 시계열로 분석하여, 기상 변화가 고속도로 노선을 따라 어떻게 이동하는지(예: 서해안 안개가 경부선으로 확산되는 속도 등)를 파악하는 예측 모델을 구축할 수 있습니다.
+
+
+RESNATN_DAYHMINSEC,WTCD_RGDVS_CD,WTCD_RGDVS,PRSNT_WETHER_CN,NOPHN_CD,VSBT_DIST,ALL_CLAM,MFALF_CLAM,ACLF,PRSNT_CELSTEMP,DWP_CELSTEMP,DSFX,FEEL_CELSTEMP,TOP_CELSTEMP,NMYR_TOP_CELSTEMP,CTNY_TOP_CELSTEMP,LWST_CELSTEMP,NMYR_LWST_CELSTEMP,CTNY_LWST_CELSTEMP,DAY_PRCPT,PCNTS_PRCPT,NW_MSNF,MSNF,RLTV_HMDT,WNDRC_CN,WIND_MPS,LAST_CHANGE_DAYHMINSEC
+2026040706,202,양평,留묒쓬,-99.0,39.63,0,0,-99.0,1.0,-2.7,-99,-99,-99,-99,-99,-99,-99,-99.0,-99.0,-99,-99,-99.0,76.0,0.0,0.3,202604.0
+2026040402,277,영덕,?먮┝,-99.0,9.95,10,10,-99.0,10.4,8.9,-99,-99,-99,-99,-99,-99,-99,-99.0,0.5,-99,-99,-99.0,91.0,18.0,1.6,202604.0
+2026033113,245,정읍,援щ쫫留롮쓬,-99.0,29.15,6,6,-99.0,17.3,10.8,-99,-99,-99,-99,-99,-99,-99,-99.0,6.8,-99,-99,-99.0,66.0,2.0,2.7,203000.0
+2026040101,984,,援щ쫫留롮쓬,-99.0,22.0,6,1,-99.0,9.4,5.9,-99,-99,-99,-99,-99,-99,-99,-99.0,-99.0,-99,-99,-99.0,79.0,0.0,0.1,203000.0
+2026033114,146,전주,援щ쫫議곌툑,-99.0,36.81,3,3,-99.0,19.3,9.4,-99,-99,-99,-99,-99,-99,-99,-99.0,6.5,-99,-99,-99.0,53.0,32.0,2.5,203000.0
+
+
+데이터 분할(train-test split)
+학습용 데이터 : 검증용 데이터 : 테스트 데이터
+
+1. 전처리 - 정확도 향상, 분석의 효율성 개선, 모델의 성능 개선
+
+1) 지점별 위치 정보(Lat/Lon) 매핑: 현재 CSV에는 지점 코드만 있으므로, 각 코드가 실제 어느 고속도로 노선의 어느 좌표인지 마스터 데이터와 결합함
+2) 
+Step 1: Checking for missing values
+PRESNATN_DAYHMINSEC         0
+WTCD_RGDVS_CD               0
+WTCD_RGDVS                864
+PRSNT_WETHER_CN             0
+NOPHN_CD                    0
+VSBT_DIST                   0
+ALL_CLAM                    0
+MFALF_CLAM                  0
+ACLF                        0
+PRSNT_CELSTEMP              0
+DWP_CELSTEMP                0
+DSFX                        0
+FEEL_CELSTEMP               0
+TOP_CELSTEMP                0
+NMYR_TOP_CELSTEMP           0
+CTNY_TOP_CELSTEMP           0
+LWST_CELSTEMP               0
+NMYR_LWST_CELSTEMP          0
+CTNY_LWST_CELSTEMP          0
+DAY_PRCPT                   0
+PCNTS_PRCPT                 0
+NW_MSNF                     0
+MSNF                        0
+RLTV_HMDT                   3
+WNDRC_CN                  761
+WIND_MPS                    0
+LAST_CHANGE_DAYHMINSEC    242
+dtype: int64
+
+WTCD_RGDVS[지역코드] 				864 -- -- ROW 데이터 삭제
+	[code]
+	hiwy = hiwy.dropna(subset=["WTCD_RGDVS"])
+    print("Result: Dropped rows containing missing values.")
+WNDRC_CN[풍향내용]                 761  -- 중간값으로 대체
+	[code]
+	median = hiwy["WNDRC_CN"] .median()
+	hiwy["WNDRC_CN"] = hiwy["WNDRC_CN"].fillna(median)
+	 
+LAST_CHANGE_DAYHMINSEC[최종변경시간]    242  -- ROW 데이터 삭제
+    [code]
+    hiwy = hiwy.dropna(subset=["LAST_CHANGE_DAYHMINSEC"])
+	print("Result: Dropped rows containing missing values.")
+
+Step 2: Selecting Missing Data Strategy
+Result: Dropped rows containing missing values.
+Result: Dropped rows containing missing values.
+Result: Imputed missing values with median (23.0).
+
+PRESNATN_DAYHMINSEC         0
+WTCD_RGDVS_CD               0
+WTCD_RGDVS                  0
+PRSNT_WETHER_CN             0
+NOPHN_CD                    0
+VSBT_DIST                 368
+ALL_CLAM                    0
+MFALF_CLAM                  0
+ACLF                        0
+PRSNT_CELSTEMP              0
+DWP_CELSTEMP                0
+DSFX                        0
+FEEL_CELSTEMP               0
+TOP_CELSTEMP                0
+NMYR_TOP_CELSTEMP           0
+CTNY_TOP_CELSTEMP           0
+LWST_CELSTEMP               0
+NMYR_LWST_CELSTEMP          0
+CTNY_LWST_CELSTEMP          0
+DAY_PRCPT                   0
+PCNTS_PRCPT                 0
+NW_MSNF                     0
+MSNF                        0
+RLTV_HMDT                   0
+WNDRC_CN                    0
+WIND_MPS                    0
+LAST_CHANGE_DAYHMINSEC      0
+dtype: int64
+
+# -99를 NaN으로 변환
+df['VSBT_DIST'] = df['VSBT_DIST'].replace(-99, np.nan)
+
+# 다시 삭제 처리
+step 3: Verification after processing
+PRESNATN_DAYHMINSEC       0
+WTCD_RGDVS_CD             0
+WTCD_RGDVS                0
+PRSNT_WETHER_CN           0
+NOPHN_CD                  0
+VSBT_DIST                 0
+ALL_CLAM                  0
+MFALF_CLAM                0
+ACLF                      0
+PRSNT_CELSTEMP            0
+DWP_CELSTEMP              0
+DSFX                      0
+FEEL_CELSTEMP             0
+TOP_CELSTEMP              0
+NMYR_TOP_CELSTEMP         0
+CTNY_TOP_CELSTEMP         0
+LWST_CELSTEMP             0
+NMYR_LWST_CELSTEMP        0
+CTNY_LWST_CELSTEMP        0
+DAY_PRCPT                 0
+PCNTS_PRCPT               0
+NW_MSNF                   0
+MSNF                      0
+RLTV_HMDT                 0
+WNDRC_CN                  0
+WIND_MPS                  0
+LAST_CHANGE_DAYHMINSEC    0
+dtype: int64
+
+
+데이터를 살펴보니 지점 코드(WTCD_RGDVS_CD), 가시거리(VSBT_DIST), 기온, 습도, 풍향/풍속 등이 포함되어 특정 노선(서해안선)에서 발생한 안개가 다른 노선(경부선)으로 확산되는 **시공간적 전이(Spatio-temporal Transition)**를 분석하려면 단순한 회귀 분석보다는 지리적 요인과 시간적 흐름을 동시에 고려하는 기법이 필요하다고 생각 했습니다.
+
+Step 4: Check original statistics before scaling
+--------------------------------------------------
+Result5: Dropped the 'PRSNT_WETHER_CN' column.
+       PRESNATN_DAYHMINSEC  WTCD_RGDVS_CD  ...      WIND_MPS  LAST_CHANGE_DAYHMINSEC
+count         1.650600e+04   16506.000000  ...  16506.000000            16506.000000
+mean          2.026039e+09     198.532049  ...      2.201054           202701.668484
+std           2.440669e+03      63.704078  ...      3.068208              170.702526
+min           2.026033e+09      90.000000  ...    -99.000000           202604.000000
+25%           2.026040e+09     137.000000  ...      1.000000           202604.000000
+50%           2.026040e+09     203.000000  ...      1.900000           202604.000000
+75%           2.026041e+09     258.000000  ...      3.100000           202604.000000
+max           2.026041e+09     295.000000  ...     19.900000           203000.000000
+
+[8 rows x 25 columns]
+Result6: Dropped the 'WTCD_RGDVS' column.
+       PRESNATN_DAYHMINSEC  WTCD_RGDVS_CD  ...      WIND_MPS  LAST_CHANGE_DAYHMINSEC
+count         1.650600e+04   16506.000000  ...  16506.000000            16506.000000
+mean          2.026039e+09     198.532049  ...      2.201054           202701.668484
+std           2.440669e+03      63.704078  ...      3.068208              170.702526
+min           2.026033e+09      90.000000  ...    -99.000000           202604.000000
+25%           2.026040e+09     137.000000  ...      1.000000           202604.000000
+50%           2.026040e+09     203.000000  ...      1.900000           202604.000000
+75%           2.026041e+09     258.000000  ...      3.100000           202604.000000
+max           2.026041e+09     295.000000  ...     19.900000           203000.000000
+
+[8 rows x 25 columns]
+
+Step 6: Standardization & Normalization
+
+Step 7: Compare results of Scaling (VSBT_DIST column)
+--------------------------------------------------
+Original value:      16.88
+Standardized result: -0.5057
+Normalized result :  0.3369
+
+Step 8: Min/Max values after Normalization
+--------------------------------------------------
+Min value (All features): 0.0
+Max value (All features): 1.0000000000000568
+Result7: Final Data.
+--------------------------------------------------
+[[0.00000000e+00 5.85365854e-02 0.00000000e+00 ... 8.88888889e-01
+  8.52817494e-01 1.00000000e+00]
+ [1.31181965e-04 5.85365854e-02 0.00000000e+00 ... 8.05555556e-01
+  8.40201850e-01 1.00000000e+00]
+ [2.62363872e-04 5.85365854e-02 0.00000000e+00 ... 8.88888889e-01
+  8.51135408e-01 1.00000000e+00]
+ ...
+ [9.99737636e-01 5.51219512e-01 0.00000000e+00 ... 6.38888889e-01
+  8.50294365e-01 0.00000000e+00]
+ [9.99868818e-01 5.51219512e-01 0.00000000e+00 ... 5.55555556e-01
+  8.41042893e-01 0.00000000e+00]
+ [1.00000000e+00 5.51219512e-01 0.00000000e+00 ... 6.38888889e-01
+  8.41883936e-01 0.00000000e+00]]
+--------------------------------------------------
+
+
+분류 문제에 있어서 성능지표의 필요성
+■ 모델을 평가하는 성능지표들
+• 회귀(regression) : MAE, MSE, RMSE, SSE
+
+
+## 머신러닝에서 다양한 추가 성능지표를 사용하는 예
+
+• 모델이 다른 모델보다 경제적으로 나은가?
+• 모델이 사용하는 데이터가 많은가? 또는 적은가?
+• 모델이 용량이 작은 컴퓨터에서도 작동하는가?
+• 모델의 손해가 얼마나 나는가
+
+
+추천드리는 주요 분석 기법과 접근 방식은 다음과 같습니다.
+1. 시공간 그래프 신경망 (ST-GNN)
+고속도로 네트워크는 '노드(측정 지점)'와 '엣지(연결된 도로)'로 이루어진 그래프 구조입니다. 안개의 이동은 도로망을 따라 흐르는 경향이 있으므로 이 모델이 가장 효과적입니다.
+GNN (Graph Neural Networks): 각 측정 지점 간의 지리적 인접성과 도로 연결 상태를 학습합니다.
+LSTM/GRU 결합: 시간의 흐름에 따른 기상 변화 패턴을 학습합니다.
+장점: 서해안선 지점의 가시거리 급감이 몇 시간 후 경부선 지점에 어떤 영향을 줄지 확률적으로 계산할 수 있습니다.
+2. 벡터 자기회귀 모델 (VAR, Vector Autoregression)
+여러 지점의 기상 데이터를 서로 연관된 시계열로 보고 분석하는 통계적 방법입니다.
+분석 방식: 서해안 A 지점, B 지점, 경부선 C 지점의 가시거리 데이터를 변수로 넣고, 서로가 서로의 과거 값에 어떻게 반응하는지 추정합니다.
+Granger Causality (인과성 검정): "서해안의 안개 발생이 경부선 안개 발생의 원인(선행 지표)이 되는가?"를 통계적으로 증명할 때 유용합니다.
+3. 합성곱 신경망 + 장단기 메모리 (ConvLSTM)기상 데이터를 수치 리스트가 아닌 '지도 형태의 이미지'나 '격자 데이터'로 변환하여 분석하는 방식입니다.
+분석 방식: 전국 혹은 특정 지역의 가시거리 데이터를 2D 격자로 매핑한 뒤, 시간에 따른 변화를 영상 처리하듯 학습합니다.
+장점: 안개가 구름처럼 확산되는 '공간적 흐름'을 시각적으로 파악하고 예측하는 데 매우 탁월합니다.
+4. 분석을 위한 데이터 전처리 팁
+모델링 전에 데이터에서 다음 사항을 먼저 정리해야 합니다.
+지점별 위치 정보(Lat/Lon) 매핑: 현재 CSV에는 지점 코드만 있으므로, 각 코드가 실제 어느 고속도로 노선의 어느 좌표인지 마스터 데이터와 결합해야 합니다.
+시차 변수(Lag Variables) 생성: 서해안선의 t 시점 데이터가 경부선의 t+1, t+2 시점에 미치는 영향을 분석할 수 있도록 시차를 둔 파생 변수를 만드세요.
+풍향 및 풍속 활용: 안개 이동 속도를 결정하는 핵심 변수입니다. WNDRC_CN(풍향)과 WIND_MPS(풍속)를 벡터 성분으로 분해하여 입력값으로 사용하세요.
+
+추천 단계
+탐색적 데이터 분석 (EDA): 서해안선과 경부선의 가시거리 상관계수를 시차별로 계산(Cross-Correlation)하여 실제로 확산 경향이 있는지 확인합니다.
+기본 모델: 우선 VAR 모델이나 Random Forest Regressor에 시차 변수를 넣어 베이스라인 성능을 확인합니다.
+고도화: 정확도를 높이고 싶다면 ST-GNN 라이브러리(예: PyTorch Geometric Temporal)를 사용하여 네트워크 기반 예측을 수행하는 것을 추천합니다.
+
+
+라이브러리 로드맵
+데이터 핸들링: pandas, numpy
+지리 데이터 처리: geopandas, shapely
+통계 분석: statsmodels (VAR 모델용)
+머신러닝/딥러닝: scikit-learn (Random Forest), pytorch-geometric-temporal (ST-GNN)
+시각화: matplotlib, seaborn, pydeck
