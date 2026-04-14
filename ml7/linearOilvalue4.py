@@ -57,7 +57,7 @@ target_days = (target_date - start_date).days
 X_new = pd.DataFrame([[target_days]], columns=['Days'])
 pred_30 = model.predict(X_new)
 
-print(f" === AI 분석 결과 === ")
+print(f"==== 최소제곱법 (OLS)을 사용하여 예측 분석 결과 ====")
 print(f"1) 분석 기준 마지막 날짜: {last_date.date()}")
 print(f"2) 30일 후 예측 날짜: {target_date.date()}")
 print(f"3) 예상 유가: ${pred_30[0]:.2f}")

@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 from sklearn.linear_model import SGDRegressor # 튜닝이 가능한 경사하강법 모델 사용
 from sklearn.model_selection import train_test_split
@@ -71,6 +72,7 @@ X_future = pd.DataFrame([[last_day + 30]], columns=['Days'])
 X_future_scaled = scaler.transform(X_future)
 pred_30 = model.predict(X_future_scaled)
 
+print(f"==== 경사하강법(SGD) 분석 결과 ====")
 print(f" === [예측] 30일 후 유가 === ")
 print(f"예상 날짜: {(data['Date'].max() + timedelta(days=30)).date()}")
 print(f"예상 유가: ${pred_30[0]:.2f}")
@@ -84,6 +86,7 @@ print(f"전체 데이터 정확도(R2): {r2_score(y, y_pred):.4f}")
 # 7. 시각화 (학습용과 테스트용 데이터를 구분하여 표시)
 plt.figure(figsize=(12, 6))
 plt.scatter(X_train, y_train, color='blue', alpha=0.3, label='Train Data')
+plt.scatter(X_val, y_val, color='brown', alpha=0.3, label='Verification Data')
 plt.scatter(X_test, y_test, color='green', alpha=0.6, label='Test Data (Unseen)')
 
 
@@ -93,13 +96,14 @@ plt.scatter(X_test, y_test, color='green', alpha=0.6, label='Test Data (Unseen)'
 sorted_days = X.sort_values(by='Days')
 X_all_scaled = scaler.transform(sorted_days) # 정렬된 데이터로 스케일링
 plt.plot(sorted_days, model.predict(X_all_scaled), color='red', linewidth=2, label='Final Model Trend')
+
 target_day = last_day + 30
 plt.scatter(target_day, pred_30[0], color='orange', s=150, zorder=5, label='30-day Forecast')
 plt.annotate(f'${pred_30[0]:.2f}', (target_day, pred_30[0]),
              textcoords="offset points", xytext=(0,10), ha='center', fontweight='bold')
 
 plt.title("Oil Price Analysis: Train/Val/Test Split Process", fontsize=15)
-plt.xlabel("Days from Start")
+plt.xlabel("Date")
 plt.ylabel("Price ($)")
 plt.legend()
 plt.grid(True, alpha=0.3)

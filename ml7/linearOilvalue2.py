@@ -46,11 +46,14 @@ target_days = (target_date - start_date).days
 X_new = pd.DataFrame([[target_days]], columns=['Days'])
 pred_30 = model.predict(X_new)
 
-print(f" === AI 분석 결과 === ")
+print(f"==== 최소제곱법 (OLS)을 사용하여 예측 분석 결과 ====")
 print(f"1) 분석 기준 마지막 날짜: {last_date.date()}")
 print(f"2) 30일 후 예측 날짜: {target_date.date()}")
-print(f"3) 예상 유가: ${pred_30[0]:.2f}")
-print(f"4) 모델 정확도(R2): {r2_score(y, y_pred):.4f}")
+print(f"3) 공식: Value = {w1:.4f} * Days + {w0:.2f}")
+print(f"4) 하루당 평균 인상액: ${w1:.4f}")
+print(f"5) 데이터 시작 시점 추정가: ${w0:.2f}")
+print(f"6) 예상 유가: ${pred_30[0]:.2f}")
+print(f"7) 모델 정확도(R2): {r2_score(y, y_pred):.4f}")
 
 # 6. 시각화 (X축 날짜 포맷 수정)
 plt.figure(figsize=(12, 6))

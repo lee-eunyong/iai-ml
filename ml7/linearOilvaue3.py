@@ -46,7 +46,7 @@ y_pred = model.predict(X)
 # pred_future는 배열 형태이므로 [0]을 붙여 단일 숫자로 추출합니다.
 predicted_value = pred_future[0]
 
-print(f" === AI 1년 후 예측 결과 === ")
+print(f"==== 최소제곱법 (OLS)을 사용하여 예측 분석 결과 ====")
 print(f"1) 데이터 마지막 날짜: {last_date.date()}")
 print(f"2) 1년 후 예측 날짜: {future_date.date()}")
 print(f"3) 1년 후 예상 유가: ${predicted_value:.2f}")
