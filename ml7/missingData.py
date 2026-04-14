@@ -8,16 +8,16 @@ from statsmodels.tsa.stattools import ccf
 base_path = Path(__file__).parent
 
 def load_HIWY_data():
-    csv_path = base_path / "datasets" / "EX_SPOT_HIWY_WETHER_HISTR.csv"
+    csv_path = base_path / "datasets" / "oil_value.csv"
     return pd.read_csv(csv_path, encoding="UTF-8")
 
 if  __name__ == "__main__":
     # Load data
     hiwy = load_HIWY_data()
 
-     # base_path = Path(__file__).parent
-    output_dir = base_path / "datasets"
-    split_train_test_data(hiwy, output_dir)
+    # base_path = Path(__file__).parent
+    # output_dir = base_path / "datasets"
+    # split_train_test_data(hiwy, output_dir)
 
     # Step 1: Initial check
     print("\nStep 1: Checking for missing values")
@@ -27,11 +27,11 @@ if  __name__ == "__main__":
     print("\nStep 2: Selecting Missing Data Strategy")
 
     # [Option 1] Drop rows with missing values
-    hiwy = hiwy.dropna(subset=["LAST_CHANGE_DAYHMINSEC"])
+    hiwy = hiwy.dropna(subset=["Value"])
     print("Result1: Dropped rows containing missing values.")
 
     # [Option 1-1] Drop rows with missing values, 삭제
-    hiwy = hiwy.dropna(subset=["WTCD_RGDVS"])
+    hiwy = hiwy.dropna(subset=["Date"])
     print("Result2: Dropped rows containing missing values.")
 
     # [Option 2] Drop the entire column
@@ -39,30 +39,33 @@ if  __name__ == "__main__":
     # print("Result: Dropped the 'total_bedrooms' column.")
 
     # [Option 3] Impute with median (Recommended)
-    median = hiwy["WNDRC_CN"].median()
-    hiwy["WNDRC_CN"] = hiwy["WNDRC_CN"].fillna(median)
+    median = hiwy["Value"].median()
+    hiwy["Value"] = hiwy["Value"].fillna(median)
     print(f"Result3: Imputed missing values with median ({median}).")
 
     # -99를 NaN으로 변환, 결측치로 값이 없음으로 표기
-    hiwy['VSBT_DIST'] = hiwy['VSBT_DIST'].replace(-99, np.nan)
-    print("Result4: Imputed NaN containing missing values.")
+    #hiwy['VSBT_DIST'] = hiwy['VSBT_DIST'].replace(-99, np.nan)
+    #print("Result4: Imputed NaN containing missing values.")
     # 변환 후 결측치 개수 확인
     print(hiwy.isnull().sum())
 
     # hiwy = hiwy.dropna(subset=["WTCD_RGDVS"])
-    hiwy = hiwy.dropna(subset=["VSBT_DIST"])
-    print("Result4: Dropped rows containing missing values.")
+    #hiwy = hiwy.dropna(subset=["VSBT_DIST"])
+    #print("Result4: Dropped rows containing missing values.")
 
     # Step 3: Final verification
     print("\nstep 3: Verification after processing")
     print(hiwy.isnull().sum())
 
-    hiwy = scNor_HIWY_data(hiwy)
+    #hiwy = scNor_HIWY_data(hiwy)
 
-    print("Result7: Final Data.")
+    print("Result4: Final Data.")
     print("-" * 50)
     print(hiwy)
     print("-" * 50)
+
+    output_dir = base_path / "datasets"
+    split_train_test_data(hiwy, output_dir)
 
     # 5. Step 6: Min/Max verification
     # print("\nStep 6: Min/Max values after Normalization")
