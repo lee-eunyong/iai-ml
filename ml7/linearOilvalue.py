@@ -36,7 +36,7 @@ model.fit(X, y)
 w1 = model.coef_[0]   # 하루당 유가 인상액
 w0 = model.intercept_ # 1946년(기준일) 당시의 추정 유가
 
-print(f" === AI 분석 결과 === ")
+print(f"==== 최소제곱법 (OLS)을 사용하여 예측 분석 결과 ====")
 print(f"공식: Value = {w1:.4f} * Days + {w0:.2f}")
 print(f"1) 하루당 평균 인상액: ${w1:.4f}")
 print(f"2) 데이터 시작 시점 추정가: ${w0:.2f}")
