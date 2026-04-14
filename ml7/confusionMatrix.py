@@ -2,8 +2,10 @@
 from sklearn.metrics import confusion_matrix
 
 # [2단계] 실험할 데이터 만들기
-y_true = [1, 0, 1, 1, 0, 1]
-y_pred = [0, 0, 1, 1, 0, 1]
+#y_true = [1, 0, 1, 1, 0, 1]
+#y_pred = [0, 0, 1, 1, 0, 1]
+y_true = [0, 1, 1, 0]
+y_pred = [0, 1, 0, 0]
 
 # [3단계] 혼동 행렬(Confusion Matrix) 계산 및 출력
 cm = confusion_matrix(y_true, y_pred)
