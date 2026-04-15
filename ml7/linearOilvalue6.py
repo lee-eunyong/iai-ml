@@ -80,7 +80,7 @@ print(f"예상 유가: ${pred_30[0]:.2f}")
 #y_pred = model.predict(X)
 X_scaled_all = scaler.transform(X) # 전체 데이터도 스케일링 적용
 y_pred = model.predict(X_scaled_all)
-print(f"전체 데이터 정확도(R2): {r2_score(y, y_pred):.4f}")
+print(f"분할 전 전체 데이터 정확도(R2): {r2_score(y, y_pred):.4f}")
 # print(f"정확도(R2): {r2_score(y, y_pred):.4f}")
 
 # 7. 시각화 (학습용과 테스트용 데이터를 구분하여 표시)

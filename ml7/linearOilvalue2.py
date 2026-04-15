@@ -47,6 +47,7 @@ X_new = pd.DataFrame([[target_days]], columns=['Days'])
 pred_30 = model.predict(X_new)
 
 print(f"==== 최소제곱법 (OLS)을 사용하여 예측 분석 결과 ====")
+print(f"0) 분석 기준 첫째 날짜: {start_date.date()}")
 print(f"1) 분석 기준 마지막 날짜: {last_date.date()}")
 print(f"2) 30일 후 예측 날짜: {target_date.date()}")
 print(f"3) 공식: Value = {w1:.4f} * Days + {w0:.2f}")
